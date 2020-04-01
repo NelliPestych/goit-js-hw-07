@@ -1,3 +1,4 @@
+'use strict';
 // Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое на правильное количество символов.
 
 // <input
@@ -28,9 +29,24 @@ form.addEventListener('blur', paintBorder);
 function paintBorder(event) {
   console.log(event.currentTarget.value.length);
   if (Number(event.currentTarget.value.length) === Number(dataLength)) {
-    form.classList.add('valid');
-    form.classList.remove('invalid');
+    inputValid();
   } else if (Number(event.currentTarget.value.length) !== Number(dataLength)) {
+    inputInvalid();
+  }
+}
+
+function inputValid() {
+  if (form.classList.contains('invalid') === true) {
+    form.classList.replace('invalid', 'valid');
+  } else if (form.classList.contains('valid') === false) {
+    form.classList.add('valid');
+  }
+}
+
+function inputInvalid() {
+  if (form.classList.contains('valid') === true) {
+    form.classList.replace('valid', 'invalid');
+  } else if (form.classList.contains('invalid') === false) {
     form.classList.add('invalid');
   }
 }

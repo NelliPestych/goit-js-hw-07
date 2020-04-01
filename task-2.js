@@ -1,3 +1,4 @@
+'use strict';
 // В HTML есть пустой список ul#ingredients.
 
 // <ul id="ingredients"></ul>

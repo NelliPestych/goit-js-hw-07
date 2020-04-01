@@ -1,13 +1,9 @@
-// 2-е задание createDocumentFragment
-const items = document.querySelectorAll('.item');
-[...items].forEach((num, el) => {
-  console.log(num, el, num.querySelectorAll('li').length);
-  console.log(
-    (num.querySelector('h2').innerHTML += ` Количество элементов: ${
-      num.querySelectorAll('li').length
-    }`),
-  );
-});
+'use strict';
 
-// console.log(elem.querySelectorAll(selector));
-// el.querySelectorAll('.li').length;
+const categories = document.querySelector('#categories');
+const res = categories.children.length;
+console.log(`В списке ${res} категории.`);
+const str = [...categories.children]
+  .map(e => `${e.children[0].textContent}: ${e.children[1].children.length}`)
+  .join('\n');
+console.log(str);
