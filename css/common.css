@@ -101,7 +101,7 @@ ul, ol {
 
 #name-output {
   font-weight: bold;
-  color: #007bff;
+  color: #6C8CFF;
 }
 
 .widget {
@@ -121,10 +121,12 @@ ul, ol {
   color: white;
   border: none;
   border-radius: 5px;
+  width: 148px;
+  height: 40px;
 }
 
 .change-color:hover {
-  background-color: #0056b3;
+  background-color: #6C8CFF;
 }
 
 #controls {
